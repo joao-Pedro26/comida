@@ -1,10 +1,16 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Link, Stack } from "expo-router";
+import { View, StyleSheet } from "react-native";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Edit app/index.tsx to edit this screen.</Text>
-    </View>
+    <>
+      <Stack.Screen options={{ title: "Not Found 404" }} />
+      <View style={styles.container}>
+        <Link href="/" style={styles.button}>
+          Go to home page!
+        </Link>
+      </View>
+    </>
   );
 }
 
